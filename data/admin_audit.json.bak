@@ -1,0 +1,90 @@
+[
+  {
+    "id": "AUD-MWN7E39Q-6254",
+    "timestamp": "2026-11-19T07:03:01.647Z",
+    "actor": "admin@agl.com",
+    "action": "ADMIN_LOGIN",
+    "target": "admin@agl.com",
+    "detail": "Signed into administrative console."
+  },
+  {
+    "id": "AUD-MWN7E37Y-1478",
+    "timestamp": "2026-11-19T07:03:01.582Z",
+    "actor": "admin@agl.com",
+    "action": "USER_LOGOUT",
+    "target": "admin@agl.com (Alorix Primary Admin)",
+    "detail": "Signed out cleanly (session duration: 0s). All saved records preserved."
+  },
+  {
+    "id": "AUD-MWN7E33J-2A5D",
+    "timestamp": "2026-11-19T07:03:01.423Z",
+    "actor": "admin@agl.com",
+    "action": "ENQUIRY_STATUS_UPDATED",
+    "target": "AGL-MWN7E337-SMMG (Verma Polymers Pvt Ltd)",
+    "detail": "Marked enquiry as SOLVED — Note: \"Quotation & COA emailed to client.\"."
+  },
+  {
+    "id": "AUD-MWN7E32N-E5F6",
+    "timestamp": "2026-11-19T07:03:01.391Z",
+    "actor": "admin@agl.com",
+    "action": "ADMIN_LOGIN",
+    "target": "admin@agl.com",
+    "detail": "Signed into administrative console."
+  },
+  {
+    "id": "AUD-MWN6YRTZ-DAEF",
+    "timestamp": "2026-11-19T06:51:06.983Z",
+    "actor": "admin@agl.com",
+    "action": "MEETING_SCHEDULED",
+    "target": "E2E Export Sync Call",
+    "detail": "Scheduled meeting for 19 Nov 2026, 07:01 am (All Team Members) — https://meet.google.com/abc-defg-hij"
+  },
+  {
+    "id": "AUD-MWN6YRSK-E96E",
+    "timestamp": "2026-11-19T06:51:06.932Z",
+    "actor": "AGL-EMP-001 (e2e.verify.staff@agl.local)",
+    "action": "EMPLOYEE_LOGIN",
+    "target": "AGL-EMP-001 (E2E Verify Staff)",
+    "detail": "Employee signed in with role \"Sales Executive\" (Commercial & Sales)."
+  },
+  {
+    "id": "AUD-MWN6YRQW-7FE1",
+    "timestamp": "2026-11-19T06:51:06.872Z",
+    "actor": "admin@agl.com",
+    "action": "EMPLOYEE_CREATED",
+    "target": "AGL-EMP-001 (E2E Verify Staff)",
+    "detail": "Created account with login \"e2e.verify.staff@agl.local\", role \"Sales Executive\", department \"Commercial & Sales\"."
+  },
+  {
+    "id": "AUD-MWN6YRMM-9943",
+    "timestamp": "2026-11-19T06:51:06.719Z",
+    "actor": "admin@agl.com",
+    "action": "ADMIN_LOGIN",
+    "target": "admin@agl.com",
+    "detail": "Signed into administrative console."
+  },
+  {
+    "id": "AUD-MWN6CHX8-EE25",
+    "timestamp": "2026-11-19T06:33:47.708Z",
+    "actor": "admin@agl.com",
+    "action": "USER_LOGOUT",
+    "target": "admin@agl.com (Alorix Primary Admin)",
+    "detail": "Signed out cleanly (session duration: 0s). All saved records preserved."
+  },
+  {
+    "id": "AUD-MWN6CHWV-4A35",
+    "timestamp": "2026-11-19T06:33:47.695Z",
+    "actor": "admin@agl.com",
+    "action": "NOTIFICATION_DELETED",
+    "target": "NTF-MWN6CHVI-40D8",
+    "detail": "Deleted notification from Notification Centre."
+  },
+  {
+    "id": "AUD-MWN6CHRR-B95D",
+    "timestamp": "2026-11-19T06:33:47.511Z",
+    "actor": "admin@agl.com",
+    "action": "ADMIN_LOGIN",
+    "target": "admin@agl.com",
+    "detail": "Signed into administrative console."
+  }
+]

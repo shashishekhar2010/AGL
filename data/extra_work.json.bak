@@ -1,0 +1,37 @@
+[
+  {
+    "id": "7574435a-bc8d-4de7-a22f-adf2fad57d12",
+    "employeeId": "1c75194b-3148-4776-b885-9e508fc08611",
+    "employeeCode": "AGL-EMP-555",
+    "employeeName": "Persistence Check User",
+    "employeeRole": "Operations Manager",
+    "department": "International Trade",
+    "datePerformed": "2026-11-18",
+    "title": "Updated Extra Work Title",
+    "category": "Client Support",
+    "description": "Assisted overseas buyer with export certificate.",
+    "impact": "",
+    "driveLinks": [
+      {
+        "id": "51a1ef23-a1fe-4270-914f-1e76cfe05b26",
+        "label": "Shot 1",
+        "url": "https://drive.google.com/file/d/1AbCdEfGhIjKlMnOpQrStUvWxYz/view",
+        "addedAt": "2026-11-19T06:14:16.736Z"
+      },
+      {
+        "id": "26c8aa6d-e8f7-48b7-b928-feb01e04ba9e",
+        "label": "Shot 2",
+        "url": "https://drive.google.com/file/d/1ZyXwVuTsRqPoNmLkJiHgFeDcBa/view",
+        "addedAt": "2026-11-19T06:14:16.736Z"
+      }
+    ],
+    "submittedAt": "2026-11-19T06:14:16.725Z",
+    "updatedAt": "2026-11-19T06:14:16.736Z",
+    "verification": {
+      "status": "pending_review",
+      "remarks": "",
+      "verifiedBy": null,
+      "verifiedAt": null
+    }
+  }
+]

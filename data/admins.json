@@ -1,0 +1,27 @@
+[
+  {
+    "id": "super-admin-root",
+    "username": "admin@shashitech",
+    "displayName": "Master Administrator",
+    "tier": "super_admin",
+    "status": "active",
+    "passwordHash": "scrypt$fd25be9df5fa7a606bcc4be715c77f9d$c7b5c6deed685c07db462bcd1a0a701d41950667879f9ae956cd704529c8a905b633c683efbd7d7255e767c25d73060af44a81cf90092b38aa3e51a9563a8cbc",
+    "createdAt": "2026-11-19T05:37:24.590Z",
+    "updatedAt": "2026-11-19T05:37:24.590Z",
+    "passwordUpdatedAt": "2026-11-19T05:37:24.590Z",
+    "updatedBy": "system"
+  },
+  {
+    "id": "primary-company-admin",
+    "username": "admin@agl.com",
+    "displayName": "Alorix Primary Admin",
+    "tier": "admin",
+    "isPrimaryAdmin": true,
+    "status": "active",
+    "passwordHash": "scrypt$f72298c2ce71c5aa5c46af6382610789$db609f9bd43954dbeb35183df62334db6df774be2b36ece7b67a2dda767271effd6aa02b0e953b8e5a3fd38fbf9bac9d53be871a96ac9c8b0aba5951917695f2",
+    "createdAt": "2026-11-19T05:37:24.590Z",
+    "updatedAt": "2026-11-19T05:37:49.834Z",
+    "passwordUpdatedAt": "2026-11-19T05:37:49.834Z",
+    "updatedBy": "admin@shashitech"
+  }
+]

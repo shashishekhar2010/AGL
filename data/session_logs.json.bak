@@ -1,0 +1,30 @@
+[
+  {
+    "id": "SES-MWN7E32K-3FF1",
+    "sessionId": "c82818db-0075-4a47-bd74-cfe2d70df62a",
+    "accountId": "primary-company-admin",
+    "username": "admin@agl.com",
+    "displayName": "Alorix Primary Admin",
+    "role": "admin",
+    "department": "Company Administration",
+    "loginAt": "2026-11-19T07:03:01.388Z",
+    "logoutAt": "2026-11-19T07:03:01.580Z",
+    "durationSeconds": 0,
+    "status": "logged_out",
+    "userAgent": "node"
+  },
+  {
+    "id": "SES-MWN6CHRO-C93C",
+    "sessionId": "420a35b6-1bba-4173-9aaf-51a6e2f07e86",
+    "accountId": "primary-company-admin",
+    "username": "admin@agl.com",
+    "displayName": "Alorix Primary Admin",
+    "role": "admin",
+    "department": "Company Administration",
+    "loginAt": "2026-11-19T06:33:47.508Z",
+    "logoutAt": "2026-11-19T06:33:47.707Z",
+    "durationSeconds": 0,
+    "status": "logged_out",
+    "userAgent": "node"
+  }
+]

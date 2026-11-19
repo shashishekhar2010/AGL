@@ -1,0 +1,8 @@
+{
+  "name": "Remix Alorix Global International",
+  "description": "Alorix Global International connects businesses with chemical sourcing, trading, and supply solutions for industrial and international markets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

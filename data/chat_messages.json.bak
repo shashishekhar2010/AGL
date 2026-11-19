@@ -1,0 +1,15 @@
+[
+  {
+    "channelId": "company-group",
+    "channelType": "group",
+    "senderId": "primary-company-admin",
+    "senderName": "Alorix Primary Admin",
+    "senderRole": "admin",
+    "text": "Hello Alorix Team Group!",
+    "id": "MSG-MWN6YRT9-F3AD97",
+    "createdAt": "2026-11-19T06:51:06.958Z",
+    "readBy": [
+      "primary-company-admin"
+    ]
+  }
+]
