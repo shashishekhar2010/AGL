@@ -48,6 +48,13 @@ export default defineConfig(() => {
           if (fs.existsSync(distDir)) {
             fs.writeFileSync(noJekyll, '');
           }
+
+          // Preserve custom domain CNAME in static build output if present
+          const rootCname = path.resolve(__dirname, 'CNAME');
+          const distCname = path.join(distDir, 'CNAME');
+          if (fs.existsSync(distDir) && fs.existsSync(rootCname)) {
+            fs.copyFileSync(rootCname, distCname);
+          }
         },
       },
     ],

@@ -132,6 +132,10 @@ export default function ContactSection({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       });
+      const contentType = response.headers.get('content-type') || '';
+      if (!contentType.includes('application/json')) {
+        throw new Error('STATIC_HOST_FALLBACK');
+      }
       const data = await response.json();
 
       if (!response.ok || !data.ok) {
@@ -162,11 +166,47 @@ export default function ContactSection({
         message: '',
       });
     } catch (err) {
-      setErrorMsg(
-        err instanceof Error
-          ? err.message
-          : 'Unable to reach enquiry service. Please try again later.'
-      );
+      if (
+        err instanceof Error &&
+        (err.message === 'STATIC_HOST_FALLBACK' ||
+          err.name === 'TypeError' ||
+          err instanceof SyntaxError)
+      ) {
+        const subject = encodeURIComponent(
+          `Business Enquiry — ${form.chemicalInterest} (${form.companyName.trim()})`
+        );
+        const body = encodeURIComponent(
+          [
+            `Full Name: ${form.fullName.trim()}`,
+            `Company: ${form.companyName.trim()}`,
+            `Business Email: ${form.businessEmail.trim()}`,
+            `Destination Country: ${form.country.trim()}`,
+            `Product / Chemical Interest: ${form.chemicalInterest.trim()}`,
+            `Packaging Format: ${form.packagingFormat}`,
+            `Incoterm Preference: ${form.incoterm}`,
+            '',
+            'Requirements:',
+            form.message.trim(),
+          ].join('\n')
+        );
+        const mailtoUrl = `mailto:${SUPPORT_EMAIL}?subject=${subject}&body=${body}`;
+        const anchor = document.createElement('a');
+        anchor.href = mailtoUrl;
+        document.body.appendChild(anchor);
+        anchor.click();
+        document.body.removeChild(anchor);
+        setConfirmation({
+          referenceId: 'DIRECT-EMAIL',
+          submittedAt: new Date().toISOString(),
+          deliveryChannel: SUPPORT_EMAIL,
+        });
+      } else {
+        setErrorMsg(
+          err instanceof Error
+            ? err.message
+            : 'Unable to reach enquiry service. Please try again later.'
+        );
+      }
     } finally {
       setSubmitting(false);
     }

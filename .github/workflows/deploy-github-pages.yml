@@ -26,34 +26,36 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install --no-audit --no-fund
+
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Compute GitHub Pages base path
         id: pages-base
         shell: bash
         run: |
-          REPO_NAME="${GITHUB_REPOSITORY#*/}"
-          OWNER_LOWER=$(echo "${GITHUB_REPOSITORY_OWNER}" | tr '[:upper:]' '[:lower:]')
-          REPO_LOWER=$(echo "${REPO_NAME}" | tr '[:upper:]' '[:lower:]')
           if [ -n "${{ vars.CUSTOM_DOMAIN_BASE }}" ]; then
-            echo "base=${{ vars.CUSTOM_DOMAIN_BASE }}" >> "$GITHUB_OUTPUT"
-          elif [ "${REPO_LOWER}" = "${OWNER_LOWER}.github.io" ]; then
-            echo "base=/" >> "$GITHUB_OUTPUT"
+            BASE_PATH="${{ vars.CUSTOM_DOMAIN_BASE }}"
+          elif [ -n "${{ steps.pages.outputs.base_path }}" ]; then
+            RAW_BASE="${{ steps.pages.outputs.base_path }}"
+            BASE_PATH="${RAW_BASE%/}/"
           else
-            echo "base=/${REPO_NAME}/" >> "$GITHUB_OUTPUT"
+            BASE_PATH="/"
           fi
+          echo "base=${BASE_PATH}" >> "$GITHUB_OUTPUT"
+          echo "Resolved VITE_BASE_PATH=${BASE_PATH}"
 
       - name: Build static website for GitHub Pages
         env:
           VITE_BASE_PATH: ${{ steps.pages-base.outputs.base }}
           VITE_API_BASE_URL: ${{ vars.VITE_API_BASE_URL }}
         run: npm run build
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
 
       - name: Upload dist artifact
         uses: actions/upload-pages-artifact@v3
