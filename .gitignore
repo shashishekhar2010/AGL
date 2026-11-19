@@ -2,7 +2,10 @@ node_modules/
 /build/
 /dist/
 coverage/
-/data/
+/data/.session_secret
+/data/*.json
+/data/*.bak
+!/src/data/
 .DS_Store
 *.log
 *.tmp
